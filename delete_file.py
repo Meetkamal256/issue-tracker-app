@@ -1,6 +1,7 @@
 from git_filter_repo import FilterRepo, Path
 
 def delete_files_callback(repo: FilterRepo):
+
     def delete_file(path: Path) -> Path:
         # List the files or directories to delete here
         paths_to_delete = ['old_directory/old_file.txt', 'obsolete_folder/']
@@ -15,3 +16,5 @@ if __name__ == '__main__':
     repo = FilterRepo(repo_dir='.')
     delete_files_callback(repo)
     repo.run()
+    
+    
